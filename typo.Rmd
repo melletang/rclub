@@ -10,3 +10,21 @@ This sentence will contain a typo.
 
 The lick brown fox jumps over the crazy quagmire.
 
+_Let's test some R code from R Cookbook._
+
+```{r}
+set.seed(955)
+# Make some noisily increasing data
+dat <- data.frame(cond = rep(c("A", "B"), each=10),
+                  xvar = 1:20 + rnorm(20,sd=3),
+                  yvar = 1:20 + rnorm(20,sd=3))
+head(dat)
+```
+```{r}
+library(ggplot2)
+ggplot(dat, aes(x=xvar, y=yvar)) +
+    geom_point(shape=1) +    # Use hollow circles
+    geom_smooth(method=lm)   # Add linear regression line 
+                             #  (by default includes 95% confidence region)
+```
+
