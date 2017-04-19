@@ -6,7 +6,7 @@ output: html_document
 ---
 #This is a test **R Markdown**.
 
-This sentence will contain a typo.
+This setnence will contain a typo.
 
 The lick brown fox jumps over the crazy quagmire.
 
